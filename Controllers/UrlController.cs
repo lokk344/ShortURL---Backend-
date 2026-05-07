@@ -47,6 +47,7 @@ public class UrlController : ControllerBase
         _context.ShortUrls.Add(url);
         await _context.SaveChangesAsync();
 
+        var baseUrl = $"{Request.Scheme}://{Request.Host}";
         return Ok(new
         {
             shortCode = shortCode,
