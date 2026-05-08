@@ -52,7 +52,7 @@ public class UrlController : ControllerBase
         {
             shortCode = shortCode,
 
-            shortUrl = $"{baseUrl}/api/url/redirect/{shortCode}",
+            shortUrl = $"{baseUrl}/{shortCode}",
 
             expireAt = url.ExpireAt
         });
